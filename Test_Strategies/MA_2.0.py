@@ -1,10 +1,3 @@
-
-
-
-
-
-# while True:
-#     print('hello')
 while not clock.is_open and once:
 
     tickers_data = client.polygon.historic_agg_v2(ticker, 1, 'hour', start,
