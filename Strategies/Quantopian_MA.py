@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 def handleData():
     def run_Strategy(self):
         self.historicalSetUp(self)
