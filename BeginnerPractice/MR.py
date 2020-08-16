@@ -2,8 +2,8 @@ from ZZ_Libraries import alpaca_trade_api as tradeapi
 
 from BeginnerPractice import Read_A_CSV
 
-API_KEY = "PKL89E7KIDDGRV43UUA2"
-API_SECRET = "pTLJPN4NRZzy5VhCedATlmEziupczCPYtSjJDZcr/fhOXNrHVcmGZY"
+API_KEY = "************"
+API_SECRET = "***********************"
 APCA_API_BASE_URL = "https://paper-api.alpaca.markets"
 
 
