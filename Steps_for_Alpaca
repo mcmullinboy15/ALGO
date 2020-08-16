@@ -1,0 +1,53 @@
+
+Localhost
+    juyper
+
+
+POLYGON :: how to get Market Data on
+1.
+    Create a Client
+        client = tradeapi.
+
+2.
+    api.REST()
+                                                            start_date  to end_date
+    aapl_data = client.polygon.historic_agg('day', 'AAPL', '2019-1-1', '2019-9-23').df #dataBase format
+    `polygon` access using `pandas`
+    `pandas` is a Python library for data
+
+                        aapl_data               # returns columns of time, open, high, low, close, volume
+    closing_prices =    aapl_data.close          # returns the column of all the closes separated by `day`
+                        aapl_data.close.mean()   # returns the int value mean of the close between the ^^ start_date to end_date ^^
+
+3.
+    Algorithum
+
+
+
+
+
+
+        for i in range(mva_period, len(closing_prices)):
+            p = closing_prices[i]
+            mva = 0.0
+            # calculate moving average
+            for x in range(1, mva_period+1):
+                mva += closing_prives[i-x] / mva_period
+
+            if p > mva*1.05 and last_qty>=0:
+                cash += last_qty*p - last_price*last_qty
+                last_price = p
+                last_qty = -cash//p                      # the negative is for Shorting the Stock
+
+            if p < mva*0.95 and last_qty<=0:
+                cash += last_qty*last_qty - last_qty*p
+                last_price = p
+                last_qty = cash//p      # rounding divide
+            history.append(cash)
+
+            print(cash)
+
+
+        `pandas`
+         closing_prices.plot()                                  # Can help you understand how it is working
+         rolling_ave  = closing_prices.rolling(mva_period)       # the current moving average
