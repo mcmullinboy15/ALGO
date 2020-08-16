@@ -1,5 +1,3 @@
-# Matthew Rock the Bomb.com
-
 import alpaca_trade_api as tradeapi
 # from Objects import Clients
 import numpy
@@ -16,7 +14,7 @@ close = numpy.random.random(100)
 
 # from livewires import colour as color
 
-# client = tradeapi.REST("AKVNXPP4VONAE7MBAX7S", "TeNc1VpUfGhaLPzJsWLLF66vfo2HFU7174z/3RX5", "https://paper-api.alpaca.markets", 'v2')
+# client = tradeapi.REST("***************", "***************", "https://paper-api.alpaca.markets", 'v2')
 # Calls GET /bars/{timeframe} for the given symbols, and returns a Barset with limit Bar objects for each of the the requested symbols. timeframe can be one of minute, 1Min, 5Min, 15Min, day or 1D. minute is an alias of 1Min. Similarly, day is an alias of 1D. start, end, after, and until need to be string format, which you can obtain with pd.Timestamp().isoformat() after cannot be used with start and until cannot be used with end.
 
 today = date.date.today() - date.timedelta(hours=24)
